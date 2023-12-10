@@ -1,5 +1,6 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import { IProduct } from '../../types/IProduct';
+import { IServerResponce } from '../../types/IServerResponce';
 
 export const productsApi = createApi({
     reducerPath: 'products/api',
@@ -7,10 +8,10 @@ export const productsApi = createApi({
         baseUrl: 'https://dummyjson.com/'
     }),
     endpoints: build => ({
-        getProducts: build.query<IProduct[], void>({
+        getProducts: build.query<IServerResponce<IProduct[]>, void>({
             query: () => ({url: `products`}),
         }),
-        getProductById: build.query<IProduct, string>({
+        getProductById: build.query<IServerResponce<IProduct>, string>({
             query: (id: string) => ({
                 url: `products/${id}`
             })

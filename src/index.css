@@ -9,12 +9,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f1f1;
   --side: 128px;
+  --gray-color: #5f5f5f;
   --main-color: #008cff;
   --accent-color: #63b9ff;
   --rare-color: #cbe8ff;
+  --stars-color: #ffb700;
+  --sale-color: #ff6600;
   --radius: 12px;
   --gap: 16px;
+  --space: 16px;
 }
 .page-container {
   padding: 16px var(--side) 16px var(--side);
@@ -35,10 +40,19 @@ button {
   border-radius: var(--radius);
   background-color: var(--accent-color);
   padding: var(--gap);
+
+  color: white;
+  font-weight: 800;
 }
 input {
   border: none;
   border-radius: var(--radius);
   background-color: var(--rare-color);
   padding: var(--gap);
+}
+span {
+  color: var(--gray-color)
+}
+p {
+  display: flex;
 }

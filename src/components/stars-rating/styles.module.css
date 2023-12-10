@@ -1,0 +1,5 @@
+.stars {
+    color: var(--stars-color);
+    display: flex;
+    align-items: center;
+}
